@@ -1,11 +1,11 @@
-baseURL = "http://example.org/"
+baseURL = "https://maryaamfarooq.github.io/mysite/"
 theme = "hugo-casper3"
 languageCode = "en-us"
 
 [params]
   facebook = "https://facebook.com"
   twitter = "https://twitter.com"
-  github = "https://github.com/jonathanjanssens"
+  github = "https://github.com/maryaamfarooq/64-bit-Operating-System.git"
   description = "CAO Assignment"
 
   mainSections = ["dir"]

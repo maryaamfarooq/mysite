@@ -1,8 +1,7 @@
 ---
 title: "Output"
 date: 2021-04-19T23:21:55+05:00
-draft: true
-feature_image : "/dir/blue1.jpg"
+feature_image : "/public/dir/blue1.jpg"
 summary: "SEECS Logo"
 ---
 

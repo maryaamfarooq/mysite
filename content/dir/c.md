@@ -1,8 +1,7 @@
 ---
 title: "Explanation"
 date: 2021-04-20T00:25:43+05:00
-draft: true
-feature_image: "/dir/blue2.jpg"
+feature_image: "/public/dir/blue2.jpg"
 summary: "Making a 64-bit OS"
 ---
 #### Building 64-bit Operating System from scratch.
@@ -72,3 +71,6 @@ This is the header file that is inlcuded in the other _.c_ files.
 10. print.c
 
 This is the implemenation file that contains the definition for all the functions mentioned above.
+
+[Link to Github repository](https://github.com/maryaamfarooq/64-bit-Operating-System.git)
+
