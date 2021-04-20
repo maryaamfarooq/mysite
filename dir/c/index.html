@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+    <title>Explanation · </title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="stylesheet" href="https://maryaamfarooq.github.io/mysite/style.main.min.70a829cbb17a0113b633175fe446bf0d75034a2e6783eb94f9800fbb843a857b.css" />
+
+</head>
+<body class=" post-template ">
+
+    <div class="site-wrapper">
+
+<header class="site-header"><div class="outer site-nav-main">
+    <div class="inner"><nav class="site-nav">
+    <div class="site-nav-left">
+        
+            <a class="site-nav-logo" href="https://maryaamfarooq.github.io/mysite/"></a>
+        
+        
+        <div class="site-nav-content">
+            <ul class="nav" role="menu">
+                
+                <li class="nav-home" role="menuitem"><a href="/mysite/home/">Home</a></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+</div>
+</div></header>
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post ">
+
+            <header class="post-full-header">
+
+                
+
+                <h1 class="post-full-title">Explanation</h1>
+
+                
+                    <p class="post-full-custom-excerpt">Making a 64-bit OS</p>
+                
+
+                <div class="post-full-byline">
+                    <section class="post-full-byline-content">
+
+                        
+
+                        <section class="post-full-byline-meta">
+                            
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="2021-124-04">20 April 2021</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 2 min read</span>
+                            </div>
+                        </section>
+
+                    </section>
+
+
+                </div>
+            </header>
+
+            
+            <figure class="post-full-image">
+                <img src="/dir/blue2.jpg" alt="Explanation" />
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <h4 id="building-64-bit-operating-system-from-scratch">Building 64-bit Operating System from scratch.</h4>
+<hr>
+<p>The 64-bit x86 operating system kernel is multiboot2-compliant.</p>
+<p>It includes boot code and a multiboot2 header so that it can be understood by bootloaders.</p>
+<p>This operating system has been primarily written in C, but also includes assembly for the hardware-specific code.</p>
+<p><strong>Tools used</strong></p>
+<ul>
+<li>
+<p>A text editor such as <em>Visual Studio Code</em></p>
+</li>
+<li>
+<p><em>Docker</em> for creating the build environment</p>
+</li>
+<li>
+<p><em>Qemu</em> for emulating the OS</p>
+</li>
+</ul>
+<p><strong>Essential Files</strong></p>
+<ol>
+<li>Dockerfile</li>
+</ol>
+<p>This file contains:</p>
+<ul>
+<li>all the steps needed to create our build environment image. The image is based on a pre-made image which contains all the gcc compilation tools that are needed.</li>
+<li>a command to install nasm which is used to compile the assembly code.</li>
+<li>the grub package for building the final iso file</li>
+</ul>
+<p>Once the image has been made, an instance of it is spinned up which is known as a container.</p>
+<ol start="2">
+<li>header.asm</li>
+</ol>
+<p>This assembly file contains data which is to be included in the operating system binary. This magic data is necessary so that bootloaders can understand that we have an operating system here that can be run on your computer.
+It specifies some information about the OS, i.e., protected mode.</p>
+<ol start="3">
+<li>main.asm</li>
+</ol>
+<p>This is the entry point to our operating system.</p>
+<p>It also contains the code to convert the 32-bit operating system to 64-bit for task 2.</p>
+<ol start="4">
+<li>linker.ld</li>
+</ol>
+<p>The files desrcibes how to link the operating system together and sets the current address to 1MB for the kernels to be loaded by the bootloader. It also includes the mulit-boot header.</p>
+<ol start="5">
+<li>grub.cfg</li>
+</ol>
+<p>This creates an iso file out of our operating system kernel binary. It also defines the name of the operating system.</p>
+<ol start="6">
+<li>Makefile</li>
+</ol>
+<p>It ensures that only files that have been modified get rebuilt. It also includes variables to hold all the assembly source files and assembly object files and contains the commands to build the object files from the corresponding source file when it is modified. The assembly source files are compiled by nasm.</p>
+<ol start="7">
+<li>kernel.iso</li>
+</ol>
+<p>This is final iso file created by running the <em>make build-x86_64</em> command.</p>
+<ol start="8">
+<li>main.c</li>
+</ol>
+<p>A function names <em>kernel_main</em> is created which is then called in the assembly code. It also contains function like <em>clr()</em> (to clear the screen), <em>set_color</em> (to change background and foreground colors), and a function to print text and display it on the screen, etc.</p>
+<ol start="9">
+<li>print.h</li>
+</ol>
+<p>This is the header file that is inlcuded in the other <em>.c</em> files.</p>
+<ol start="10">
+<li>print.c</li>
+</ol>
+<p>This is the implemenation file that contains the definition for all the functions mentioned above.</p>
+<p><a href="https://github.com/maryaamfarooq/64-bit-Operating-System.git">Link to Github repository</a></p>
+
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</main>
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed"><article class="post-card post
+
+
+ ">
+
+        
+            <a class="post-card-image-link" href="https://maryaamfarooq.github.io/mysite/dir/new/">
+                <img class="post-card-image"src="/dir/blue3.jpg" alt="CV"/>
+            </a>
+        
+    
+        <div class="post-card-content">
+    
+            <a class="post-card-content-link" href="https://maryaamfarooq.github.io/mysite/dir/new/">
+    
+                <header class="post-card-header">
+                    
+
+                    <h2 class="post-card-title">CV</h2>
+                </header>
+    
+                <section class="post-card-excerpt">
+                    <p>About Me</p>
+                </section>
+    
+            </a>
+
+            <footer class="post-card-meta">
+                    <ul class="author-list">
+                        <li class="author-list-item">
+                            <div class="author-name-tooltip"></div>
+                            <a href="#" class="static-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg></a>
+                        </li>
+                    </ul>
+                    <div class="post-card-byline-content">
+                        <span></span>
+                        <span class="post-card-byline-date"><time datetime="2021-114-04">19 April 2021</time>
+                            <span class="bull">&bull;</span> 1 min read</span>
+                    </div>
+                </footer>
+    
+        </div>
+
+</article>
+    
+
+            
+        </div>
+    </div>
+</aside>
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://maryaamfarooq.github.io/mysite/"></a> &copy; 2021</section>
+                <nav class="site-footer-nav">
+                    <a href="https://maryaamfarooq.github.io/mysite/">Latest Posts</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://github.com/maryaamfarooq/64-bit-Operating-System.git" target="_blank" rel="noopener">Github</a>
+                    <a href="https://jonathanjanssens.com" target="_blank" rel="noopener" style="opacity: 0.5;">Hugo Casper3 by Jonathan Janssens</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

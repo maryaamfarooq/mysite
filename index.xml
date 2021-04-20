@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>https://maryaamfarooq.github.io/mysite/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Apr 2021 00:25:43 +0500</lastBuildDate><atom:link href="https://maryaamfarooq.github.io/mysite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Explanation</title>
+      <link>https://maryaamfarooq.github.io/mysite/dir/c/</link>
+      <pubDate>Tue, 20 Apr 2021 00:25:43 +0500</pubDate>
+      
+      <guid>https://maryaamfarooq.github.io/mysite/dir/c/</guid>
+      <description>Making a 64-bit OS</description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>https://maryaamfarooq.github.io/mysite/dir/new/</link>
+      <pubDate>Mon, 19 Apr 2021 23:21:55 +0500</pubDate>
+      
+      <guid>https://maryaamfarooq.github.io/mysite/dir/new/</guid>
+      <description>About Me</description>
+    </item>
+    
+    <item>
+      <title>Output</title>
+      <link>https://maryaamfarooq.github.io/mysite/dir/b/</link>
+      <pubDate>Mon, 19 Apr 2021 23:21:55 +0500</pubDate>
+      
+      <guid>https://maryaamfarooq.github.io/mysite/dir/b/</guid>
+      <description>SEECS Logo</description>
+    </item>
+    
+  </channel>
+</rss>
