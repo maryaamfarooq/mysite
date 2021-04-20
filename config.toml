@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+theme = "hugo-casper3"
+languageCode = "en-us"
+
+[params]
+  facebook = "https://facebook.com"
+  twitter = "https://twitter.com"
+  github = "https://github.com/jonathanjanssens"
+  description = "CAO Assignment"
+
+  mainSections = ["dir"]
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/home/"
+    weight = 10
